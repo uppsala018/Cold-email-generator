@@ -3,24 +3,24 @@ import { SectionHeading } from "@/components/section-heading";
 
 const valuePoints = [
   {
-    title: "Guided workflow instead of open-ended chat",
+    title: "Guided workflow",
     description:
-      "Structured inputs keep the process focused, so teams spend less time deciding what to ask and more time reviewing usable outbound drafts."
+      "Structured inputs keep cold email creation focused and fast."
   },
   {
-    title: "Faster output with less prompt writing",
+    title: "Less prompt-writing effort",
     description:
-      "You do not need to rebuild the prompt every time. The workflow is already shaped for cold outreach, which cuts down friction and rework."
+      "You do not need to rebuild prompts every time you test a new angle."
   },
   {
-    title: "Better structure for real outbound use",
+    title: "Better outbound structure",
     description:
-      "Drafts are oriented around hooks, offer clarity, and next-step CTAs, so the result is closer to something you can actually send."
+      "Drafts are built around hooks, offer clarity, and low-friction CTAs."
   },
   {
-    title: "Reusable frameworks and easier angle testing",
+    title: "Reusable frameworks",
     description:
-      "Use the same system across offers, segments, and campaigns, then test different angles without restarting from scratch."
+      "Use the same system across offers, segments, and follow-up campaigns."
   }
 ];
 
@@ -58,8 +58,8 @@ export function WhyDifferent() {
       <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
         <SectionHeading
           eyebrow="Why It Wins"
-          title="Why teams pay for this instead of using generic AI chat"
-          description="Cold Email Generator gives you a more reliable outbound workflow, not just another blank box. The value is not only the AI. It is the system around it."
+          title="Why this beats generic AI for cold outreach"
+          description="Cold Email Generator gives outbound teams a clearer system for writing cold emails, follow-ups, and subject lines."
         />
 
         <div className="mt-16 grid gap-6 lg:grid-cols-2">
@@ -81,12 +81,11 @@ export function WhyDifferent() {
                 Comparison
               </p>
               <h3 className="mt-3 text-3xl font-semibold text-white">
-                A better workflow beats a better prompt
+                A better cold email workflow beats a better prompt
               </h3>
             </div>
             <p className="max-w-xl text-sm leading-7 text-slate-300">
-              The goal is not to replace AI. It is to give outbound teams a faster, more reusable
-              way to get strong drafts without the usual prompt-writing overhead.
+              The value is not just the AI output. It is the faster, more reusable system around it.
             </p>
           </div>
 

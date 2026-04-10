@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { DashboardHeader } from "@/components/dashboard/dashboard-header";
 import { GeneratorForm } from "@/components/dashboard/generator-form";
@@ -6,6 +7,14 @@ import { isUserSubscribed } from "@/lib/billing";
 import { createClient } from "@/lib/supabase/server";
 import { getUserTemplates } from "@/lib/templates";
 import { getUserUsageSnapshot } from "@/lib/usage";
+
+export const metadata: Metadata = {
+  title: "Dashboard",
+  robots: {
+    index: false,
+    follow: false
+  }
+};
 
 export default async function DashboardPage() {
   const supabase = await createClient();

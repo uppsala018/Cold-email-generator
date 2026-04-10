@@ -9,25 +9,33 @@ export const metadata: Metadata = {
     template: "%s | Cold Email Generator"
   },
   description:
-    "A purpose-built outbound tool for creating stronger cold emails with better hooks, clearer CTAs, and faster testing.",
+    "AI cold email generator for cold email sequences, follow-ups, and subject lines. Create stronger outreach faster with better structure, angles, and CTAs.",
   keywords: [
     "cold email generator",
-    "AI cold email writer",
+    "AI cold email generator",
+    "cold email sequence generator",
+    "cold email follow-up generator",
+    "cold email subject line generator",
     "outbound sales email",
     "B2B email generator",
     "SaaS lead generation"
   ],
+  alternates: {
+    canonical: "/"
+  },
   openGraph: {
-    title: "Cold Email Generator",
+    title: "AI Cold Email Generator for Sequences, Follow-Ups, and Subject Lines",
     description:
-      "Write better cold emails faster with a purpose-built outbound tool for sharper structure, hooks, and CTAs.",
-    type: "website"
+      "Create cold emails, follow-up sequences, and subject lines faster with a purpose-built AI cold email generator for outbound teams.",
+    type: "website",
+    url: "/",
+    siteName: "Cold Email Generator"
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cold Email Generator",
+    title: "AI Cold Email Generator for Outbound Teams",
     description:
-      "A purpose-built outbound tool for faster cold email drafts and more consistent outreach."
+      "Generate cold email sequences, follow-ups, and subject lines faster with a purpose-built outbound workflow."
   }
 };
 

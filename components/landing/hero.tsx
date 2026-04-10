@@ -2,9 +2,9 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { ButtonLink } from "@/components/button-link";
 
 const proofPoints = [
-  "Faster than prompting generic AI from scratch",
-  "Sharper hooks, structure, and CTAs",
-  "More consistent outreach across every campaign"
+  "AI cold email generator built for real outreach",
+  "Faster cold email sequences and follow-ups",
+  "Sharper subject lines, hooks, and CTAs"
 ];
 
 export function Hero() {
@@ -13,15 +13,15 @@ export function Hero() {
       <div className="mx-auto grid max-w-7xl gap-16 px-6 py-24 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-28">
         <div>
           <div className="inline-flex rounded-full border border-brand/30 bg-brand/10 px-4 py-2 text-sm font-medium text-brand-soft">
-            Purpose-built outbound writing for teams that send cold email
+            AI Cold Email Generator for outbound teams
           </div>
           <h1 className="mt-8 max-w-3xl text-5xl font-semibold tracking-tight text-white sm:text-6xl">
-            Stop Prompting Generic AI. Build Better Cold Email Faster.
+            AI Cold Email Generator for Sequences, Follow-Ups, and Subject Lines
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            Cold Email Generator is a purpose-built outbound tool that helps you create
-            stronger first-touch emails in less time, with better structure, clearer hooks,
-            and CTAs that are easier to send and test.
+            Cold Email Generator helps you create stronger cold emails faster, with better
+            structure, clearer hooks, stronger follow-ups, and subject lines that are easier to
+            test in real outbound campaigns.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <ButtonLink href="/signup" className="gap-2">
@@ -48,9 +48,9 @@ export function Hero() {
         <div className="rounded-[32px] border border-white/10 bg-slate-950/70 p-6 shadow-glow">
           <div className="rounded-[24px] border border-brand/20 bg-surface p-5">
             <div className="flex items-center justify-between">
-              <p className="text-sm font-medium text-brand-soft">Live preview</p>
+              <p className="text-sm font-medium text-brand-soft">Cold Email Generator Preview</p>
               <span className="rounded-full border border-white/10 px-3 py-1 text-xs text-slate-300">
-                Structured outbound draft
+                AI cold email sample
               </span>
             </div>
             <div className="mt-6 space-y-4 rounded-2xl border border-white/10 bg-background/70 p-5">

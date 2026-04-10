@@ -4,7 +4,12 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Pricing"
+  title: "Pricing",
+  description:
+    "Pricing for Cold Email Generator. Get the AI cold email generator for sequences, follow-ups, and subject lines at 50% off launch pricing.",
+  alternates: {
+    canonical: "/pricing"
+  }
 };
 
 export default function PricingPage() {

@@ -1,6 +1,6 @@
 import { SectionHeading } from "@/components/section-heading";
 
-const faqs = [
+export const faqs = [
   {
     question: "Who is Cold Email Generator for?",
     answer:
