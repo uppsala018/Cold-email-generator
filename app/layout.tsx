@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s | Cold Email Generator"
   },
   description:
-    "Generate personalized cold emails for SaaS, agencies, partnerships, affiliate outreach, and B2B sales with a subscription-ready SaaS app.",
+    "A purpose-built outbound tool for creating stronger cold emails with better hooks, clearer CTAs, and faster testing.",
   keywords: [
     "cold email generator",
     "AI cold email writer",
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Cold Email Generator",
     description:
-      "Write better cold emails in minutes with a subscription-ready AI SaaS built on Next.js, Supabase, Stripe, and OpenAI.",
+      "Write better cold emails faster with a purpose-built outbound tool for sharper structure, hooks, and CTAs.",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
     title: "Cold Email Generator",
     description:
-      "Generate professional cold emails and subject lines for modern outbound teams."
+      "A purpose-built outbound tool for faster cold email drafts and more consistent outreach."
   }
 };
 

@@ -13,7 +13,7 @@ export default async function LoginPage({
     <main className="flex min-h-screen items-center justify-center px-6 py-16">
       <AuthCard
         title="Welcome back"
-        description="Log in to access your protected dashboard and subscription-backed generator."
+        description="Log in to access your outbound workspace and continue building stronger cold emails faster."
         actionLabel="Login"
         action={loginAction}
         error={params.error}

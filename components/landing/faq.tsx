@@ -4,22 +4,37 @@ const faqs = [
   {
     question: "Who is Cold Email Generator for?",
     answer:
-      "It is designed for founders, SDRs, agencies, consultants, affiliate teams, and B2B sales operators who need better outbound copy quickly."
+      "It is designed for founders, SDRs, agencies, consultants, and B2B sales teams that want to send stronger cold email faster."
   },
   {
     question: "What does the generator return?",
     answer:
-      "Each generation returns one polished cold email and two subject lines, optimized around the audience, offer, tone, CTA, and personalization notes you provide."
+      "Each generation returns a connected outbound sequence with subject lines, a first outreach email, two follow-ups, and a breakup email built around your audience, offer, tone, CTA, and personalization notes."
+  },
+  {
+    question: "Why not just use ChatGPT?",
+    answer:
+      "You can, but generic AI usually means more prompting, more rewriting, and less consistency. Cold Email Generator is focused on outbound, so it helps you get to stronger structure, hooks, and CTAs faster while making it easier to test multiple angles."
+  },
+  {
+    question: "What is the pricing?",
+    answer:
+      "The regular price is $19.99/month. Right now the launch offer brings it down to $9.99/month, so you save 50%."
   },
   {
     question: "How does access work after signup?",
     answer:
-      "Users sign up with email and password through Supabase Auth. After that they can upgrade through Stripe Checkout to unlock the protected generator inside the dashboard."
+      "Create an account, choose the paid plan, and you can start generating outbound drafts right inside your dashboard."
   },
   {
-    question: "Can this support future limits or team features?",
+    question: "Is there any long-term commitment?",
     answer:
-      "Yes. The codebase includes placeholder usage tracking and a clean server-side structure so monthly limits and subscription syncing can be added cleanly."
+      "No. You can cancel anytime, and there is no long-term lock-in. The launch offer is meant to make it easy to start with low risk."
+  },
+  {
+    question: "What makes the output better for cold email?",
+    answer:
+      "The workflow is tuned for first-touch outreach and follow-ups, which means better structure, clearer hooks, stronger CTAs, and a sequence that is easier to refine, test, and send."
   }
 ];
 
@@ -30,7 +45,7 @@ export function FAQ() {
         <SectionHeading
           eyebrow="FAQ"
           title="Questions teams ask before they ship"
-          description="The app is structured for production deployment on Vercel with Supabase, Stripe, and OpenAI wired behind server-side boundaries."
+          description="Everything here is built to answer the core buying question: why pay for a purpose-built outbound tool instead of using generic AI manually?"
         />
         <div className="mx-auto mt-16 max-w-4xl space-y-4">
           {faqs.map((item) => (

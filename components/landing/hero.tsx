@@ -2,9 +2,9 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { ButtonLink } from "@/components/button-link";
 
 const proofPoints = [
-  "Personalized intros for B2B outreach",
-  "Professional subject lines included",
-  "Built for founders, agencies, SDRs, and SaaS teams"
+  "Faster than prompting generic AI from scratch",
+  "Sharper hooks, structure, and CTAs",
+  "More consistent outreach across every campaign"
 ];
 
 export function Hero() {
@@ -13,14 +13,15 @@ export function Hero() {
       <div className="mx-auto grid max-w-7xl gap-16 px-6 py-24 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-28">
         <div>
           <div className="inline-flex rounded-full border border-brand/30 bg-brand/10 px-4 py-2 text-sm font-medium text-brand-soft">
-            AI-powered outbound copy for revenue teams
+            Purpose-built outbound writing for teams that send cold email
           </div>
           <h1 className="mt-8 max-w-3xl text-5xl font-semibold tracking-tight text-white sm:text-6xl">
-            Write Better Cold Emails in Minutes
+            Stop Prompting Generic AI. Build Better Cold Email Faster.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            Generate personalized cold emails for outreach, partnerships, SaaS, affiliate
-            offers, agencies, and B2B sales without staring at a blank page.
+            Cold Email Generator is a purpose-built outbound tool that helps you create
+            stronger first-touch emails in less time, with better structure, clearer hooks,
+            and CTAs that are easier to send and test.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <ButtonLink href="/signup" className="gap-2">
@@ -49,31 +50,32 @@ export function Hero() {
             <div className="flex items-center justify-between">
               <p className="text-sm font-medium text-brand-soft">Live preview</p>
               <span className="rounded-full border border-white/10 px-3 py-1 text-xs text-slate-300">
-                Pro email output
+                Structured outbound draft
               </span>
             </div>
             <div className="mt-6 space-y-4 rounded-2xl border border-white/10 bg-background/70 p-5">
               <div>
                 <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Subject lines</p>
-                <p className="mt-2 text-sm text-white">1. Quick idea to help [Company] book more demos</p>
-                <p className="mt-1 text-sm text-white">2. A practical outbound angle for [Company]</p>
+                <p className="mt-2 text-sm text-white">1. A faster way for [Company] to test new outbound angles</p>
+                <p className="mt-1 text-sm text-white">2. One idea to help [Company] improve reply quality</p>
               </div>
               <div className="h-px bg-white/10" />
               <div className="space-y-3 text-sm leading-7 text-slate-300">
                 <p>Hi Sarah,</p>
                 <p>
-                  I noticed your team is expanding outbound and likely balancing reply quality
-                  with rep speed. That usually gets harder as personalization expectations rise.
+                  I noticed your team is scaling outbound, which usually means reps have to move
+                  faster without letting message quality slip.
                 </p>
                 <p>
-                  We help SaaS teams generate tailored first-touch emails that stay concise,
-                  relevant, and easier to test across segments.
+                  Cold Email Generator gives teams a faster way to build first-touch emails with
+                  stronger hooks, tighter structure, and clearer CTAs than starting from a blank
+                  prompt in generic AI.
                 </p>
                 <p>
-                  If useful, I can share a few sample angles for your current ICP and show how
-                  teams use it to cut drafting time dramatically.
+                  It also makes it easier to test multiple angles for the same offer while keeping
+                  messaging consistent across segments.
                 </p>
-                <p>Open to a quick look this week?</p>
+                <p>Worth a quick look this week?</p>
               </div>
             </div>
           </div>

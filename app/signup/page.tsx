@@ -13,7 +13,7 @@ export default async function SignupPage({
     <main className="flex min-h-screen items-center justify-center px-6 py-16">
       <AuthCard
         title="Create your account"
-        description="Sign up with Supabase Auth, then upgrade through Stripe to unlock the generator."
+        description="Create your account to access a purpose-built cold email workflow for faster drafts, sharper hooks, and clearer CTAs."
         actionLabel="Sign Up"
         action={signupAction}
         error={params.error}

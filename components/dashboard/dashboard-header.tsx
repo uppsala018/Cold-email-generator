@@ -14,6 +14,9 @@ export function DashboardHeader({ email, subscribed }: DashboardHeaderProps) {
         <p className="mt-2 text-sm text-slate-300">
           Subscription status: {subscribed ? "Active" : "Inactive"}
         </p>
+        <p className="mt-1 text-sm text-slate-400">
+          Build connected first-touch and follow-up sequences from one structured workflow.
+        </p>
       </div>
       <form action={logoutAction}>
         <button

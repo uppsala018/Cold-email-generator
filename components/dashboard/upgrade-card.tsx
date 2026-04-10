@@ -34,14 +34,23 @@ export function UpgradeCard() {
       </p>
       <h2 className="mt-4 text-3xl font-semibold text-white">Unlock Cold Email Generator Pro</h2>
       <p className="mt-4 max-w-2xl text-slate-300">
-        This dashboard is protected by an active Stripe subscription. Upgrade to access the
-        generator, future monthly limits, and billing-backed account access.
+        Upgrade to access the full outbound workflow and generate cold emails with better
+        structure, stronger hooks, clearer CTAs, and more consistent messaging.
       </p>
       <div className="mt-8 rounded-3xl border border-white/10 bg-background/50 p-6">
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div>
             <p className="text-lg font-semibold text-white">Cold Email Generator Pro</p>
-            <p className="mt-2 text-sm text-slate-300">$29/month billed monthly through Stripe Checkout.</p>
+            <div className="mt-3 flex flex-wrap items-end gap-3">
+              <p className="text-2xl font-semibold text-white">$9.99/month</p>
+              <p className="pb-0.5 text-sm text-slate-400 line-through">$19.99/month</p>
+              <span className="rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand-soft">
+                Save 50%
+              </span>
+            </div>
+            <p className="mt-3 text-sm text-slate-300">
+              Launch offer for early customers. Cancel anytime. No long-term lock-in.
+            </p>
           </div>
           <button
             type="button"
@@ -49,7 +58,7 @@ export function UpgradeCard() {
             disabled={loading}
             className="rounded-full bg-brand px-6 py-3 text-sm font-semibold text-slate-950 disabled:cursor-not-allowed disabled:opacity-60"
           >
-            {loading ? "Redirecting..." : "Upgrade Now"}
+            {loading ? "Redirecting..." : "Upgrade for $9.99/month"}
           </button>
         </div>
       </div>

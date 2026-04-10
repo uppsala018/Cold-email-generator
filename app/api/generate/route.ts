@@ -7,8 +7,10 @@ import { createClient } from "@/lib/supabase/server";
 import { getUserUsageSnapshot, incrementUserGenerationCount } from "@/lib/usage";
 
 const requestSchema = z.object({
+  personaPreset: z.string().min(3),
   targetAudience: z.string().min(3),
   productOrService: z.string().min(3),
+  angle: z.string().min(3),
   tone: z.string().min(3),
   offer: z.string().min(3),
   cta: z.string().min(3),
@@ -53,14 +55,25 @@ export async function POST(request: Request) {
         {
           role: "user",
           content: `
-Generate a cold email for these inputs:
+Generate a connected 4-email outbound sequence for these inputs:
+- persona preset: ${input.personaPreset}
 - target audience: ${input.targetAudience}
 - product or service: ${input.productOrService}
+- angle: ${input.angle}
 - tone: ${input.tone}
 - offer: ${input.offer}
 - CTA: ${input.cta}
 - personalization notes: ${input.personalizationNotes}
 - email length: ${input.emailLength}
+
+Sequence requirements:
+- Return 3 variants named professional, punchy, and consultative.
+- For each variant, return one first outreach email, one follow-up 1, one follow-up 2, and one breakup email.
+- Keep the sequence coherent so each follow-up feels like it belongs to the same campaign.
+- Use the selected persona preset to shape the business context, likely priorities, and language choices.
+- Treat the custom target audience field as the more specific override when it adds extra detail.
+- Use the selected angle as the strategic lens throughout the sequence.
+- Use the same offer and audience context throughout, but vary the phrasing naturally.
           `.trim()
         }
       ],
@@ -72,17 +85,126 @@ Generate a cold email for these inputs:
             type: "object",
             additionalProperties: false,
             properties: {
-              subjectLines: {
-                type: "array",
-                items: { type: "string" },
-                minItems: 2,
-                maxItems: 2
-              },
-              email: {
-                type: "string"
+              variants: {
+                type: "object",
+                additionalProperties: false,
+                properties: {
+                  professional: {
+                    type: "object",
+                    additionalProperties: false,
+                    properties: {
+                      subjectLines: {
+                        type: "array",
+                        items: {
+                          type: "object",
+                          additionalProperties: false,
+                          properties: {
+                            category: {
+                              type: "string",
+                              enum: ["Direct", "Curiosity", "Benefit-driven", "Question-based", "Low-friction"]
+                            },
+                            line: {
+                              type: "string"
+                            }
+                          },
+                          required: ["category", "line"]
+                        },
+                        minItems: 5,
+                        maxItems: 5
+                      },
+                      sequence: {
+                        type: "object",
+                        additionalProperties: false,
+                        properties: {
+                          firstOutreach: { type: "string" },
+                          followUp1: { type: "string" },
+                          followUp2: { type: "string" },
+                          breakupEmail: { type: "string" }
+                        },
+                        required: ["firstOutreach", "followUp1", "followUp2", "breakupEmail"]
+                      }
+                    },
+                    required: ["subjectLines", "sequence"]
+                  },
+                  punchy: {
+                    type: "object",
+                    additionalProperties: false,
+                    properties: {
+                      subjectLines: {
+                        type: "array",
+                        items: {
+                          type: "object",
+                          additionalProperties: false,
+                          properties: {
+                            category: {
+                              type: "string",
+                              enum: ["Direct", "Curiosity", "Benefit-driven", "Question-based", "Low-friction"]
+                            },
+                            line: {
+                              type: "string"
+                            }
+                          },
+                          required: ["category", "line"]
+                        },
+                        minItems: 5,
+                        maxItems: 5
+                      },
+                      sequence: {
+                        type: "object",
+                        additionalProperties: false,
+                        properties: {
+                          firstOutreach: { type: "string" },
+                          followUp1: { type: "string" },
+                          followUp2: { type: "string" },
+                          breakupEmail: { type: "string" }
+                        },
+                        required: ["firstOutreach", "followUp1", "followUp2", "breakupEmail"]
+                      }
+                    },
+                    required: ["subjectLines", "sequence"]
+                  },
+                  consultative: {
+                    type: "object",
+                    additionalProperties: false,
+                    properties: {
+                      subjectLines: {
+                        type: "array",
+                        items: {
+                          type: "object",
+                          additionalProperties: false,
+                          properties: {
+                            category: {
+                              type: "string",
+                              enum: ["Direct", "Curiosity", "Benefit-driven", "Question-based", "Low-friction"]
+                            },
+                            line: {
+                              type: "string"
+                            }
+                          },
+                          required: ["category", "line"]
+                        },
+                        minItems: 5,
+                        maxItems: 5
+                      },
+                      sequence: {
+                        type: "object",
+                        additionalProperties: false,
+                        properties: {
+                          firstOutreach: { type: "string" },
+                          followUp1: { type: "string" },
+                          followUp2: { type: "string" },
+                          breakupEmail: { type: "string" }
+                        },
+                        required: ["firstOutreach", "followUp1", "followUp2", "breakupEmail"]
+                      }
+                    },
+                    required: ["subjectLines", "sequence"]
+                  }
+                },
+                required: ["professional", "punchy", "consultative"]
               }
             },
-            required: ["subjectLines", "email"]
+            required: ["variants"]
           }
         }
       }
@@ -93,8 +215,35 @@ Generate a cold email for these inputs:
     }
 
     const parsed = JSON.parse(response.output_text) as {
-      subjectLines: string[];
-      email: string;
+      variants: {
+        professional: {
+          subjectLines: { category: string; line: string }[];
+          sequence: {
+            firstOutreach: string;
+            followUp1: string;
+            followUp2: string;
+            breakupEmail: string;
+          };
+        };
+        punchy: {
+          subjectLines: { category: string; line: string }[];
+          sequence: {
+            firstOutreach: string;
+            followUp1: string;
+            followUp2: string;
+            breakupEmail: string;
+          };
+        };
+        consultative: {
+          subjectLines: { category: string; line: string }[];
+          sequence: {
+            firstOutreach: string;
+            followUp1: string;
+            followUp2: string;
+            breakupEmail: string;
+          };
+        };
+      };
     };
 
     await incrementUserGenerationCount(user.id);
@@ -108,7 +257,7 @@ Generate a cold email for these inputs:
     return NextResponse.json(
       {
         error:
-          error instanceof Error ? error.message : "Unable to generate cold email right now."
+          error instanceof Error ? error.message : "Unable to generate the outbound sequence right now."
       },
       { status: 500 }
     );
