@@ -9,6 +9,17 @@ export const metadata: Metadata = {
     "Pricing for Cold Email Generator. Get the AI cold email generator for sequences, follow-ups, and subject lines at 50% off launch pricing.",
   alternates: {
     canonical: "/pricing"
+  },
+  openGraph: {
+    title: "Pricing | Cold Email Generator",
+    description:
+      "Pricing for Cold Email Generator. Get the AI cold email generator for sequences, follow-ups, and subject lines at 50% off launch pricing.",
+    url: "/pricing"
+  },
+  twitter: {
+    title: "Pricing | Cold Email Generator",
+    description:
+      "Pricing for Cold Email Generator with 50% off launch pricing for the full outbound workflow."
   }
 };
 
