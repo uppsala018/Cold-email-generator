@@ -11,6 +11,7 @@ import { getAdminUsers, getUserNotifications } from "@/lib/notifications";
 import { createClient } from "@/lib/supabase/server";
 import { getUserTemplates } from "@/lib/templates";
 import { getUserUsageSnapshot } from "@/lib/usage";
+import type { AdminAnalyticsSummary, AdminDashboardUser } from "@/types";
 
 export const metadata: Metadata = {
   title: "Dashboard",
@@ -35,9 +36,16 @@ export default async function DashboardPage() {
   const usage = await getUserUsageSnapshot(user.id);
   const templates = subscribed ? await getUserTemplates(user.id) : [];
   const notifications = await getUserNotifications(user.id);
-  const [adminUsers, analytics] = admin
-    ? await Promise.all([getAdminUsers(), getAdminAnalyticsSummary()])
-    : [[], null];
+  let adminUsers: AdminDashboardUser[] = [];
+  let analytics: AdminAnalyticsSummary | null = null;
+
+  if (admin) {
+    try {
+      [adminUsers, analytics] = await Promise.all([getAdminUsers(), getAdminAnalyticsSummary()]);
+    } catch (error) {
+      console.error("Unable to load admin dashboard data.", error);
+    }
+  }
 
   return (
     <main className="mx-auto min-h-screen max-w-7xl px-6 py-10 lg:px-8">
