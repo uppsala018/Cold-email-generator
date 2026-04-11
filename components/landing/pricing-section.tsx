@@ -41,6 +41,20 @@ export function PricingSection() {
           </div>
           <ButtonLink href="/signup">Start at $9.99/month</ButtonLink>
         </div>
+        <div className="mt-8 grid gap-4 md:grid-cols-3">
+          <div className="rounded-2xl border border-white/10 bg-background/50 p-4">
+            <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Try first</p>
+            <p className="mt-2 text-sm text-slate-200">Use the live demo before you subscribe.</p>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-background/50 p-4">
+            <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Full workflow</p>
+            <p className="mt-2 text-sm text-slate-200">Unlock 4-email sequences, variants, and saved templates.</p>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-background/50 p-4">
+            <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Low risk</p>
+            <p className="mt-2 text-sm text-slate-200">Cancel anytime with no long-term lock-in.</p>
+          </div>
+        </div>
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {features.map((feature) => (
             <div key={feature} className="flex items-start gap-3 rounded-2xl border border-white/10 bg-background/50 p-4">

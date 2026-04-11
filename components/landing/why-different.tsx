@@ -4,23 +4,15 @@ import { SectionHeading } from "@/components/section-heading";
 const valuePoints = [
   {
     title: "Guided workflow",
-    description:
-      "Structured inputs keep cold email creation focused and fast."
+    description: "Structured inputs keep cold email creation focused and fast."
   },
   {
-    title: "Less prompt-writing effort",
-    description:
-      "You do not need to rebuild prompts every time you test a new angle."
+    title: "Less prompt work",
+    description: "You do not need to rebuild prompts every time you test a new angle."
   },
   {
-    title: "Better outbound structure",
-    description:
-      "Drafts are built around hooks, offer clarity, and low-friction CTAs."
-  },
-  {
-    title: "Reusable frameworks",
-    description:
-      "Use the same system across offers, segments, and follow-up campaigns."
+    title: "Better sequence structure",
+    description: "Drafts are built around stronger hooks, offer clarity, and low-friction CTAs."
   }
 ];
 
@@ -59,10 +51,10 @@ export function WhyDifferent() {
         <SectionHeading
           eyebrow="Why It Wins"
           title="Why this beats generic AI for cold outreach"
-          description="A clearer, faster system for writing cold emails, follow-ups, and subject lines."
+          description="A clearer system for writing cold emails, subject lines, and follow-ups without starting from scratch."
         />
 
-        <div className="mt-14 grid gap-5 lg:grid-cols-2">
+        <div className="mt-14 grid gap-5 lg:grid-cols-3">
           {valuePoints.map((point) => (
             <div
               key={point.title}
@@ -85,7 +77,7 @@ export function WhyDifferent() {
               </h3>
             </div>
             <p className="max-w-xl text-sm leading-6 text-slate-300">
-              The difference is not just output. It is the faster outreach workflow around it.
+              The difference is not just better wording. It is a faster outreach workflow with less setup and cleaner output.
             </p>
           </div>
 

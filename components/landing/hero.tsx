@@ -2,9 +2,9 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { ButtonLink } from "@/components/button-link";
 
 const proofPoints = [
-  "AI cold email generator built for real outreach",
-  "Faster cold email sequences and follow-ups",
-  "Sharper subject lines, hooks, and CTAs"
+  "Faster first drafts for real outbound work",
+  "Subject lines and follow-ups in one workflow",
+  "Sharper hooks and clearer CTAs"
 ];
 
 export function Hero() {
@@ -19,9 +19,9 @@ export function Hero() {
             AI Cold Email Generator for Personalized Cold Emails That Actually Get Sent
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            Build personalized cold emails faster with sharper subject lines, cleaner follow-up
-            sequences, and an outreach workflow built for outbound teams, agencies, founders, and
-            consultants.
+            Write personalized cold emails faster with stronger subject lines, cleaner follow-up
+            sequences, and a focused outbound workflow for founders, agencies, consultants, and
+            lean sales teams.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <ButtonLink href="/signup" className="gap-2">

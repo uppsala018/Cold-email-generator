@@ -4,22 +4,22 @@ import { SectionHeading } from "@/components/section-heading";
 const benefits = [
   {
     title: "Faster than generic AI chat",
-    description: "Skip prompt rewriting and move straight into a cold email workflow.",
+    description: "Skip prompt rewriting and move straight into a focused workflow.",
     icon: PenSquare
   },
   {
     title: "Better cold email structure",
-    description: "Get clearer hooks, cleaner flow, and CTAs that feel natural.",
+    description: "Get clearer hooks, tighter flow, and CTAs that feel natural.",
     icon: ShieldCheck
   },
   {
     title: "Easier angle testing",
-    description: "Test offers, positioning, and follow-up angles without restarting.",
+    description: "Test offers and positioning without rebuilding from scratch.",
     icon: Bolt
   },
   {
     title: "More consistent outreach",
-    description: "Keep quality high across campaigns, reps, and lists.",
+    description: "Keep messaging strong across campaigns, reps, and lists.",
     icon: LineChart
   }
 ];
@@ -30,7 +30,7 @@ export function Benefits() {
       <SectionHeading
         eyebrow="Benefits"
         title="Built to write cold emails faster and better"
-        description="A focused cold email generator for teams that want faster output, better structure, and more repeatable outreach."
+        description="A focused cold email generator for teams that want faster output, cleaner structure, and more repeatable outreach."
       />
       <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
         {benefits.map((benefit) => (

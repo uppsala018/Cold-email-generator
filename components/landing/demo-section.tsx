@@ -50,15 +50,14 @@ export function DemoSection() {
       <SectionHeading
         eyebrow="Try The Demo"
         title="See the product in action before you sign up"
-        description="Use the public demo to generate one short sample first-touch email. The full product unlocks complete sequences, multiple variants, saved templates, and a richer outbound workflow."
+        description="Generate a real first-touch sample in under a minute. Upgrade to unlock full sequences, multiple variants, saved templates, and the complete outbound workflow."
       />
 
       <div className="mt-16 grid gap-6 xl:grid-cols-[0.95fr_1.05fr]">
         <div className="rounded-[28px] border border-white/10 bg-surface p-6">
           <h3 className="text-xl font-semibold text-white">Public demo</h3>
           <p className="mt-2 text-sm leading-7 text-slate-300">
-            This preview is intentionally limited. You will get one short sample output, not the
-            full paid workflow.
+            Start with one real sample email here. The paid product unlocks the full 4-email sequence workflow.
           </p>
 
           <form action={onSubmit} className="mt-8 space-y-5">
@@ -89,7 +88,7 @@ export function DemoSection() {
               disabled={loading}
               className="w-full rounded-full bg-brand px-5 py-3 text-sm font-semibold text-slate-950 disabled:cursor-not-allowed disabled:opacity-60"
             >
-              {loading ? "Generating..." : "Generate Demo Output"}
+              {loading ? "Generating..." : "Generate My Sample Email"}
             </button>
           </form>
         </div>
@@ -119,7 +118,7 @@ export function DemoSection() {
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-200">
               Sign up to unlock full 4-email sequences, multiple writing variants, saved templates,
-              stronger testing workflow, and subscriber-only generation.
+              faster angle testing, and subscriber-only generation.
             </p>
             <div className="mt-5 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href="/signup" className="gap-2">
