@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { loginAction } from "@/app/actions";
+import { loginAction, loginWithGoogleAction } from "@/app/actions";
 import { AuthCard } from "@/components/auth-card";
 
 export const metadata: Metadata = {
@@ -28,6 +28,7 @@ export default async function LoginPage({
         description="Log in to access your outbound workspace and continue building stronger cold emails faster."
         actionLabel="Login"
         action={loginAction}
+        oauthActions={[{ label: "Continue with Google", action: loginWithGoogleAction }]}
         error={params.error}
         footer={
           <>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { signupAction } from "@/app/actions";
+import { loginWithGoogleAction, signupAction } from "@/app/actions";
 import { AuthCard } from "@/components/auth-card";
 
 export const metadata: Metadata = {
@@ -28,6 +28,7 @@ export default async function SignupPage({
         description="Create your account to access a purpose-built cold email workflow for faster drafts, sharper hooks, and clearer CTAs."
         actionLabel="Sign Up"
         action={signupAction}
+        oauthActions={[{ label: "Continue with Google", action: loginWithGoogleAction }]}
         error={params.error}
         footer={
           <>
