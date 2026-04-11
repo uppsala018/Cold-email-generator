@@ -44,7 +44,8 @@ export async function getUserTemplates(userId: string) {
     .order("created_at", { ascending: false });
 
   if (error) {
-    throw error;
+    console.error("Unable to load saved templates.", error);
+    return [];
   }
 
   return ((data || []) as StoredTemplateRow[]).map(mapTemplate);

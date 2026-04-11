@@ -3,9 +3,10 @@ import { logoutAction } from "@/app/actions";
 type DashboardHeaderProps = {
   email: string;
   subscribed: boolean;
+  admin?: boolean;
 };
 
-export function DashboardHeader({ email, subscribed }: DashboardHeaderProps) {
+export function DashboardHeader({ email, subscribed, admin = false }: DashboardHeaderProps) {
   return (
     <div className="flex flex-col gap-4 rounded-[28px] border border-white/10 bg-white/5 p-6 md:flex-row md:items-center md:justify-between">
       <div>
@@ -17,6 +18,9 @@ export function DashboardHeader({ email, subscribed }: DashboardHeaderProps) {
         <p className="mt-1 text-sm text-slate-400">
           Build connected first-touch and follow-up sequences from one structured workflow.
         </p>
+        {admin ? (
+          <p className="mt-2 text-sm text-emerald-300">Admin tools enabled for this account.</p>
+        ) : null}
       </div>
       <form action={logoutAction}>
         <button

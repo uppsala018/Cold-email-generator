@@ -80,3 +80,34 @@ export type SavedTemplate = {
   emailLength: EmailLength;
   createdAt: string;
 };
+
+export type UserNotification = {
+  id: string;
+  userId: string;
+  title: string;
+  message: string;
+  createdAt: string;
+  readAt: string | null;
+  createdByEmail: string;
+};
+
+export type AdminDashboardUser = {
+  id: string;
+  email: string;
+  createdAt: string | null;
+  lastSignInAt: string | null;
+  subscriptionStatus: string;
+  isAdmin: boolean;
+  notificationCount: number;
+  unreadNotificationCount: number;
+};
+
+export type AdminAnalyticsSummary = {
+  totalVisitors: number;
+  visitorsToday: number;
+  visitorsLast7Days: number;
+  topPages: Array<{
+    path: string;
+    visits: number;
+  }>;
+};

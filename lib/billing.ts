@@ -1,16 +1,26 @@
 import type { User } from "@supabase/supabase-js";
 
+function getAdminBypassEmails() {
+  return (process.env.ADMIN_BYPASS_EMAILS || "")
+    .split(",")
+    .map((email) => email.trim().toLowerCase())
+    .filter(Boolean);
+}
+
+export function isAdminUser(user: Pick<User, "email"> | null) {
+  if (!user?.email) {
+    return false;
+  }
+
+  return getAdminBypassEmails().includes(user.email.toLowerCase());
+}
+
 export function isUserSubscribed(user: User | null) {
   if (!user) {
     return false;
   }
 
-  const adminBypassEmails = (process.env.ADMIN_BYPASS_EMAILS || "")
-    .split(",")
-    .map((email) => email.trim().toLowerCase())
-    .filter(Boolean);
-
-  if (user.email && adminBypassEmails.includes(user.email.toLowerCase())) {
+  if (isAdminUser(user)) {
     return true;
   }
 
