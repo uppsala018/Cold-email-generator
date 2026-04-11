@@ -5,6 +5,9 @@ import { AuthCard } from "@/components/auth-card";
 
 export const metadata: Metadata = {
   title: "Sign Up",
+  alternates: {
+    canonical: "/signup"
+  },
   robots: {
     index: false,
     follow: false

@@ -16,12 +16,12 @@ export function Hero() {
             AI Cold Email Generator for outbound teams
           </div>
           <h1 className="mt-8 max-w-3xl text-5xl font-semibold tracking-tight text-white sm:text-6xl">
-            AI Cold Email Generator for Sequences, Follow-Ups, and Subject Lines
+            AI Cold Email Generator for Personalized Cold Emails That Actually Get Sent
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            Cold Email Generator helps you create stronger cold emails faster, with better
-            structure, clearer hooks, stronger follow-ups, and subject lines that are easier to
-            test in real outbound campaigns.
+            Build personalized cold emails faster with sharper subject lines, cleaner follow-up
+            sequences, and an outreach workflow built for outbound teams, agencies, founders, and
+            consultants.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <ButtonLink href="/signup" className="gap-2">
@@ -48,9 +48,9 @@ export function Hero() {
         <div className="rounded-[32px] border border-white/10 bg-slate-950/70 p-6 shadow-glow">
           <div className="rounded-[24px] border border-brand/20 bg-surface p-5">
             <div className="flex items-center justify-between">
-              <p className="text-sm font-medium text-brand-soft">Cold Email Generator Preview</p>
+              <p className="text-sm font-medium text-brand-soft">Example Cold Email Output</p>
               <span className="rounded-full border border-white/10 px-3 py-1 text-xs text-slate-300">
-                AI cold email sample
+                Subject Lines + Email
               </span>
             </div>
             <div className="mt-6 space-y-4 rounded-2xl border border-white/10 bg-background/70 p-5">
@@ -67,9 +67,9 @@ export function Hero() {
                   faster without letting message quality slip.
                 </p>
                 <p>
-                  Cold Email Generator gives teams a faster way to build first-touch emails with
-                  stronger hooks, tighter structure, and clearer CTAs than starting from a blank
-                  prompt in generic AI.
+                  This AI cold email generator gives teams a faster way to build first-touch emails
+                  with stronger hooks, tighter structure, and clearer CTAs than starting from a
+                  blank prompt in generic AI.
                 </p>
                 <p>
                   It also makes it easier to test multiple angles for the same offer while keeping

@@ -26,28 +26,28 @@ const valuePoints = [
 
 const comparisonRows = [
   {
-    label: "Starting point",
-    generic: "Blank chat and a fresh prompt every time",
-    product: "Structured inputs built for outbound"
+    label: "How you start",
+    generic: "A blank AI chat and a new prompt every time",
+    product: "A cold email generator with a structured outreach workflow"
   },
   {
-    label: "Speed to first draft",
-    generic: "Usually slower because setup and prompt rewriting add friction",
+    label: "Speed",
+    generic: "Slower because setup and prompt rewriting add friction",
     product: "Faster because the workflow already knows what matters"
   },
   {
     label: "Output quality",
-    generic: "Can be uneven and often needs more cleanup",
-    product: "More consistent structure, hooks, and CTA flow"
+    generic: "Inconsistent cold emails that often need more cleanup",
+    product: "Clearer structure, stronger subject lines, and cleaner CTA flow"
   },
   {
-    label: "Testing new angles",
-    generic: "Often means rewriting prompts and reframing the ask",
-    product: "Easier to test positioning, offers, and segments repeatedly"
+    label: "Follow-up sequences",
+    generic: "Usually built manually or pieced together prompt by prompt",
+    product: "Connected follow-up sequences built inside one system"
   },
   {
-    label: "Team repeatability",
-    generic: "Depends heavily on who writes the prompt",
+    label: "Repeatability",
+    generic: "Results depend heavily on who writes the prompt",
     product: "Reusable system that keeps outreach more consistent"
   }
 ];
@@ -59,39 +59,39 @@ export function WhyDifferent() {
         <SectionHeading
           eyebrow="Why It Wins"
           title="Why this beats generic AI for cold outreach"
-          description="Cold Email Generator gives outbound teams a clearer system for writing cold emails, follow-ups, and subject lines."
+          description="A clearer, faster system for writing cold emails, follow-ups, and subject lines."
         />
 
-        <div className="mt-16 grid gap-6 lg:grid-cols-2">
+        <div className="mt-14 grid gap-5 lg:grid-cols-2">
           {valuePoints.map((point) => (
             <div
               key={point.title}
-              className="rounded-3xl border border-white/10 bg-slate-950/60 p-6"
+              className="rounded-3xl border border-white/10 bg-slate-950/60 p-5"
             >
-              <h3 className="text-xl font-semibold text-white">{point.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-300">{point.description}</p>
+              <h3 className="text-lg font-semibold text-white">{point.title}</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-300">{point.description}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 rounded-[32px] border border-brand/25 bg-surface p-8 shadow-glow">
-          <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+        <div className="mt-14 rounded-[32px] border border-brand/25 bg-surface p-8 shadow-glow">
+          <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-brand-soft">
                 Comparison
               </p>
               <h3 className="mt-3 text-3xl font-semibold text-white">
-                A better cold email workflow beats a better prompt
+                Cold Email Generator vs generic AI chat
               </h3>
             </div>
-            <p className="max-w-xl text-sm leading-7 text-slate-300">
-              The value is not just the AI output. It is the faster, more reusable system around it.
+            <p className="max-w-xl text-sm leading-6 text-slate-300">
+              The difference is not just output. It is the faster outreach workflow around it.
             </p>
           </div>
 
-          <div className="mt-8 overflow-hidden rounded-3xl border border-white/10">
+          <div className="mt-7 overflow-hidden rounded-3xl border border-white/10">
             <div className="grid grid-cols-[1fr_1fr_1fr] bg-background/70 text-sm">
-              <div className="border-b border-white/10 px-5 py-4 text-slate-400">Category</div>
+              <div className="border-b border-white/10 px-5 py-4 text-slate-400">What matters</div>
               <div className="border-b border-l border-white/10 px-5 py-4 text-slate-400">
                 Generic AI
               </div>
@@ -105,13 +105,13 @@ export function WhyDifferent() {
                     {row.label}
                   </div>
                   <div className="border-b border-l border-white/10 px-5 py-5">
-                    <div className="flex items-start gap-3 text-sm leading-7 text-slate-300">
+                    <div className="flex items-start gap-3 text-sm leading-6 text-slate-300">
                       <X className="mt-1 h-4 w-4 shrink-0 text-slate-500" />
                       <span>{row.generic}</span>
                     </div>
                   </div>
                   <div className="border-b border-l border-white/10 bg-brand/5 px-5 py-5">
-                    <div className="flex items-start gap-3 text-sm leading-7 text-slate-100">
+                    <div className="flex items-start gap-3 text-sm leading-6 text-slate-100">
                       <Check className="mt-1 h-4 w-4 shrink-0 text-brand-soft" />
                       <span>{row.product}</span>
                     </div>

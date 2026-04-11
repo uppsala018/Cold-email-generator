@@ -30,17 +30,17 @@ export function Benefits() {
       <SectionHeading
         eyebrow="Benefits"
         title="Built to write cold emails faster and better"
-        description="This is a focused cold email generator for teams that want faster output, better structure, and more repeatable outreach."
+        description="A focused cold email generator for teams that want faster output, better structure, and more repeatable outreach."
       />
-      <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+      <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
         {benefits.map((benefit) => (
           <div
             key={benefit.title}
             className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur"
           >
             <benefit.icon className="h-10 w-10 rounded-2xl border border-brand/20 bg-brand/10 p-2 text-brand-soft" />
-            <h3 className="mt-6 text-xl font-semibold text-white">{benefit.title}</h3>
-            <p className="mt-3 text-sm leading-7 text-slate-300">{benefit.description}</p>
+            <h3 className="mt-5 text-lg font-semibold text-white">{benefit.title}</h3>
+            <p className="mt-2 text-sm leading-6 text-slate-300">{benefit.description}</p>
           </div>
         ))}
       </div>
