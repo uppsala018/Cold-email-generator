@@ -1,9 +1,28 @@
+export async function OPTIONS() {
+  return new Response(null, {
+    status: 204,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type"
+    }
+  });
+}
+
 export async function POST(req: Request) {
   try {
     const { text, tone } = await req.json();
 
     if (!text || typeof text !== "string") {
-      return Response.json({ error: "Missing text" }, { status: 400 });
+      return Response.json(
+        { error: "Missing text" },
+        {
+          status: 400,
+          headers: {
+            "Access-Control-Allow-Origin": "*"
+          }
+        }
+      );
     }
 
     let instruction = "Rewrite this email in clear, natural, professional English.";
@@ -36,14 +55,42 @@ export async function POST(req: Request) {
 
     const data = await openaiResponse.json();
 
+    if (!openaiResponse.ok) {
+      console.error("OpenAI API error:", data);
+      return Response.json(
+        { error: "OpenAI request failed", details: data },
+        {
+          status: 500,
+          headers: {
+            "Access-Control-Allow-Origin": "*"
+          }
+        }
+      );
+    }
+
     const rewritten =
       data.output_text ||
       data.output?.[0]?.content?.[0]?.text ||
       "";
 
-    return Response.json({ rewritten });
+    return Response.json(
+      { rewritten },
+      {
+        headers: {
+          "Access-Control-Allow-Origin": "*"
+        }
+      }
+    );
   } catch (error) {
     console.error("Rewrite API error:", error);
-    return Response.json({ error: "Server error" }, { status: 500 });
+    return Response.json(
+      { error: "Server error" },
+      {
+        status: 500,
+        headers: {
+          "Access-Control-Allow-Origin": "*"
+        }
+      }
+    );
   }
 }
